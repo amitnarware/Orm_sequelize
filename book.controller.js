@@ -23,6 +23,16 @@ Book.create({
 }).catch((error) => {
     console.error('Failed to create a new record : ', error);
 });
+Book.create({
+    title: "python learn",
+    author: "py",
+    release_date: "2020-12-14",
+    subject: 3
+}).then(res => {
+    console.log(res)
+}).catch((error) => {
+    console.error('Failed to create a new record : ', error);
+});
 sequelize.sync().then(() => {
 
                   Book.findOne({
