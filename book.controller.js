@@ -35,6 +35,17 @@ Book.create({
 });
 sequelize.sync().then(() => {
 
+    Book.findAll().then(res => {
+        console.log(res)
+    }).catch((error) => {
+        console.error('Failed to retrieve data : ', error);
+    });
+
+}).catch((error) => {
+    console.error('Unable to create table : ', error);
+});
+sequelize.sync().then(() => {
+
                   Book.findOne({
                       where: {
                           id : "4"
