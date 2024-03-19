@@ -25,7 +25,7 @@ Book.create({
 });
 Book.create({
     title: "python learn",
-    author: "py",
+    author: "python-code",
     release_date: "2020-12-14",
     subject: 3
 }).then(res => {
